@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_motor_control_axi_gpio_1_0_synth_1" LaunchDir="D:/ALL_PROJECTS/motor_control/motor_control.runs/design_motor_control_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

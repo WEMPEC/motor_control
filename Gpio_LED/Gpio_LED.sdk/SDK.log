@@ -1,0 +1,279 @@
+14:45:12 INFO  : Registering command handlers for SDK TCF services
+14:45:13 INFO  : Launching XSCT server: xsct.bat -interactive D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\temp_xsdb_launch_script.tcl
+14:45:15 INFO  : XSCT server has started successfully.
+14:45:15 INFO  : Successfully done setting XSCT server connection channel  
+14:45:16 INFO  : Processing command line option -hwspec D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper.hdf.
+14:45:16 INFO  : Successfully done setting SDK workspace  
+15:12:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:12:16 INFO  : 'fpga -state' command is executed.
+15:12:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:16 INFO  : Jtag cable 'Digilent Zed 210248A49B8A' is selected.
+15:12:16 INFO  : 'jtag frequency' command is executed.
+15:12:16 INFO  : Sourcing of 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:12:16 INFO  : Context for 'APU' is selected.
+15:12:17 INFO  : Hardware design information is loaded from 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf'.
+15:12:17 INFO  : 'configparams force-mem-access 1' command is executed.
+15:12:17 INFO  : Context for 'APU' is selected.
+15:12:17 INFO  : 'stop' command is executed.
+15:12:18 INFO  : 'ps7_init' command is executed.
+15:12:18 INFO  : 'ps7_post_config' command is executed.
+15:12:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:12:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:12:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:12:19 INFO  : The application 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:12:19 INFO  : 'configparams force-mem-access 0' command is executed.
+15:12:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+loadhw -hw D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+dow D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:12:19 INFO  : Memory regions updated for context APU
+15:12:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:12:19 INFO  : 'con' command is executed.
+15:12:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+con
+----------------End of Script----------------
+
+15:12:19 INFO  : Launch script is exported to file 'D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_gpio_led.elf_on_local.tcl'
+15:13:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:13:35 INFO  : FPGA configured successfully with bitstream "D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.runs/impl_1/design_gpio_led_wrapper.bit"
+15:13:43 INFO  : Disconnected from the channel tcfchan#1.
+15:13:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:13:44 INFO  : 'fpga -state' command is executed.
+15:13:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:45 INFO  : Jtag cable 'Digilent Zed 210248A49B8A' is selected.
+15:13:45 INFO  : 'jtag frequency' command is executed.
+15:13:45 INFO  : Sourcing of 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:13:45 INFO  : Context for 'APU' is selected.
+15:13:47 INFO  : Hardware design information is loaded from 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf'.
+15:13:47 INFO  : 'configparams force-mem-access 1' command is executed.
+15:13:47 INFO  : Context for 'APU' is selected.
+15:13:47 INFO  : 'stop' command is executed.
+15:13:49 INFO  : 'ps7_init' command is executed.
+15:13:49 INFO  : 'ps7_post_config' command is executed.
+15:13:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:13:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:49 INFO  : The application 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:13:49 INFO  : 'configparams force-mem-access 0' command is executed.
+15:13:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+loadhw -hw D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+dow D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:13:49 INFO  : Memory regions updated for context APU
+15:13:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:50 INFO  : 'con' command is executed.
+15:13:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+con
+----------------End of Script----------------
+
+15:13:50 INFO  : Launch script is exported to file 'D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_gpio_led.elf_on_local.tcl'
+15:14:46 INFO  : Disconnected from the channel tcfchan#2.
+15:14:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:14:47 INFO  : 'fpga -state' command is executed.
+15:14:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:14:48 INFO  : Jtag cable 'Digilent Zed 210248A49B8A' is selected.
+15:14:48 INFO  : 'jtag frequency' command is executed.
+15:14:48 INFO  : Sourcing of 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:14:48 INFO  : Context for 'APU' is selected.
+15:14:50 INFO  : Hardware design information is loaded from 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf'.
+15:14:50 INFO  : 'configparams force-mem-access 1' command is executed.
+15:14:50 INFO  : Context for 'APU' is selected.
+15:14:50 INFO  : 'stop' command is executed.
+15:14:52 INFO  : 'ps7_init' command is executed.
+15:14:52 INFO  : 'ps7_post_config' command is executed.
+15:14:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:14:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:14:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:14:52 INFO  : The application 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:14:52 INFO  : 'configparams force-mem-access 0' command is executed.
+15:14:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+loadhw -hw D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+dow D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:14:52 INFO  : Memory regions updated for context APU
+15:14:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:14:52 INFO  : 'con' command is executed.
+15:14:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+con
+----------------End of Script----------------
+
+15:14:52 INFO  : Launch script is exported to file 'D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_gpio_led.elf_on_local.tcl'
+15:16:45 INFO  : Disconnected from the channel tcfchan#3.
+15:16:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:16:46 INFO  : 'fpga -state' command is executed.
+15:16:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:16:47 INFO  : Jtag cable 'Digilent Zed 210248A49B8A' is selected.
+15:16:47 INFO  : 'jtag frequency' command is executed.
+15:16:47 INFO  : Sourcing of 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:16:47 INFO  : Context for 'APU' is selected.
+15:16:49 INFO  : Hardware design information is loaded from 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf'.
+15:16:49 INFO  : 'configparams force-mem-access 1' command is executed.
+15:16:49 INFO  : Context for 'APU' is selected.
+15:16:49 INFO  : 'stop' command is executed.
+15:16:50 INFO  : 'ps7_init' command is executed.
+15:16:50 INFO  : 'ps7_post_config' command is executed.
+15:16:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:50 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:16:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:51 INFO  : The application 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:16:51 INFO  : 'configparams force-mem-access 0' command is executed.
+15:16:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+loadhw -hw D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+dow D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:16:51 INFO  : Memory regions updated for context APU
+15:16:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:51 INFO  : 'con' command is executed.
+15:16:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+con
+----------------End of Script----------------
+
+15:16:51 INFO  : Launch script is exported to file 'D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_gpio_led.elf_on_local.tcl'
+15:17:21 INFO  : Disconnected from the channel tcfchan#4.
+15:17:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:17:22 INFO  : 'fpga -state' command is executed.
+15:17:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:17:22 INFO  : Jtag cable 'Digilent Zed 210248A49B8A' is selected.
+15:17:22 INFO  : 'jtag frequency' command is executed.
+15:17:22 INFO  : Sourcing of 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:17:23 INFO  : Context for 'APU' is selected.
+15:17:25 INFO  : Hardware design information is loaded from 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf'.
+15:17:25 INFO  : 'configparams force-mem-access 1' command is executed.
+15:17:25 INFO  : Context for 'APU' is selected.
+15:17:25 INFO  : 'stop' command is executed.
+15:17:26 INFO  : 'ps7_init' command is executed.
+15:17:26 INFO  : 'ps7_post_config' command is executed.
+15:17:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:17:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:26 INFO  : The application 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:17:26 INFO  : 'configparams force-mem-access 0' command is executed.
+15:17:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+loadhw -hw D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+dow D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:17:26 INFO  : Memory regions updated for context APU
+15:17:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:27 INFO  : 'con' command is executed.
+15:17:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+con
+----------------End of Script----------------
+
+15:17:27 INFO  : Launch script is exported to file 'D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_gpio_led.elf_on_local.tcl'
+15:18:47 INFO  : Disconnected from the channel tcfchan#5.
+15:18:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49B8A" && level==0} -index 1' command is executed.
+15:18:48 INFO  : 'fpga -state' command is executed.
+15:18:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:18:50 INFO  : Jtag cable 'Digilent Zed 210248A49B8A' is selected.
+15:18:50 INFO  : 'jtag frequency' command is executed.
+15:18:50 INFO  : Sourcing of 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:18:50 INFO  : Context for 'APU' is selected.
+15:18:53 INFO  : Hardware design information is loaded from 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf'.
+15:18:53 INFO  : 'configparams force-mem-access 1' command is executed.
+15:18:53 INFO  : Context for 'APU' is selected.
+15:18:53 INFO  : 'stop' command is executed.
+15:18:55 INFO  : 'ps7_init' command is executed.
+15:18:55 INFO  : 'ps7_post_config' command is executed.
+15:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:55 INFO  : The application 'D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:18:55 INFO  : 'configparams force-mem-access 0' command is executed.
+15:18:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+loadhw -hw D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/design_gpio_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+dow D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.sdk/gpio_led/Debug/gpio_led.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:18:56 INFO  : Memory regions updated for context APU
+15:18:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:56 INFO  : 'con' command is executed.
+15:18:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A49B8A"} -index 0
+con
+----------------End of Script----------------
+
+15:18:56 INFO  : Launch script is exported to file 'D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_gpio_led.elf_on_local.tcl'
+15:27:02 INFO  : Disconnected from the channel tcfchan#6.

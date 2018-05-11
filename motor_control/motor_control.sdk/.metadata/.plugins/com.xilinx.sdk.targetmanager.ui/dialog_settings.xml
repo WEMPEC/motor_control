@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="design_motor_control_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="D:\ALL_PROJECTS\motor_control\motor_control.runs\impl_1\design_motor_control_wrapper.bit" key="design_motor_control_wrapper_hw_platform_0-bitFile"/>
+	<item value="Local" key="design_motor_control_wrapper_hw_platform_0-target"/>
+	<item value="false" key="design_motor_control_wrapper_hw_platform_0-partial_bit"/>
+	<item value="" key="design_motor_control_wrapper_hw_platform_0-bmmFile"/>
+	<item value="Auto Detect" key="design_motor_control_wrapper_hw_platform_0-device"/>
+</section>

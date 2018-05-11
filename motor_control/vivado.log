@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Mar 27 11:40:30 2018
+# Process ID: 9444
+# Current directory: D:/ALL_PROJECTS/motor_control
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9224 D:\ALL_PROJECTS\motor_control\motor_control.xpr
+# Log file: D:/ALL_PROJECTS/motor_control/vivado.log
+# Journal file: D:/ALL_PROJECTS/motor_control\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ALL_PROJECTS/motor_control/motor_control.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:58 . Memory (MB): peak = 772.273 ; gain = 115.789
+update_compile_order -fileset sources_1
+open_bd_design {D:/ALL_PROJECTS/motor_control/motor_control.srcs/sources_1/bd/design_motor_control/design_motor_control.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_motor_control> from BD file <D:/ALL_PROJECTS/motor_control/motor_control.srcs/sources_1/bd/design_motor_control/design_motor_control.bd>
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 861.973 ; gain = 70.402
+launch_sdk -workspace D:/ALL_PROJECTS/motor_control/motor_control.sdk -hwspec D:/ALL_PROJECTS/motor_control/motor_control.sdk/design_motor_control_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/ALL_PROJECTS/motor_control/motor_control.sdk -hwspec D:/ALL_PROJECTS/motor_control/motor_control.sdk/design_motor_control_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 13:09:20 2018...

@@ -1,0 +1,22 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 20 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 40 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 450 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -y 200 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y -40 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 660 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 3 660 20 NJ 20 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 200 80 650
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 0 360 190 360 630
+preplace netloc ARESETN_1 1 1 2 190 350 610
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 670 40 NJ 40 NJ
+preplace netloc clk_wiz_1_locked 1 1 1 170
+preplace netloc clk_wiz_0_clk_out1 1 1 1 180
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 320 NJ 320 640
+preplace netloc S00_ARESETN_1 1 1 2 200 330 620
+levelinfo -pg 1 -20 90 410 740 850 890 -top -110 -bot 1040
+",
+}
+0

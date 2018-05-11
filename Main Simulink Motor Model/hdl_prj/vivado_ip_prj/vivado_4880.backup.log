@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed May 09 16:30:14 2018
+# Process ID: 4880
+# Current directory: C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj
+# Command line: vivado.exe -mode batch -source vivado_insert_ip.tcl
+# Log file: C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/vivado.log
+# Journal file: C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj\vivado.jou
+#-----------------------------------------------------------
+source vivado_insert_ip.tcl
+# open_project vivado_prj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/ipcore'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2016_2/Vivado/2016.2/data/ip'.
+# update_ip_catalog -delete_ip {./ipcore/motor_con_ip_v1_0/component.xml} -repo_path {./ipcore} -quiet
+# update_ip_catalog -add_ip {./ipcore/motor_con_ip_v1_0.zip} -repo_path {./ipcore}
+INFO: [IP_Flow 19-949] Unzipped './ipcore/motor_con_ip_v1_0.zip' into repository 'c:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/ipcore'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/ipcore'
+# update_ip_catalog
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+# set HDLCODERIPVLNV [get_property VLNV [get_ipdefs -filter {NAME==motor_con_ip && VERSION==1.0}]]
+# set HDLCODERIPINST motor_con_ip_0
+# set BDFILEPATH [get_files -quiet system_top.bd]
+# open_bd_design $BDFILEPATH
+Adding cell -- xilinx.com:ip:clk_wiz:5.3 - clk_wiz_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Successfully read diagram <system_top> from BD file <C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system_top/system_top.bd>
+# create_bd_cell -type ip -vlnv $HDLCODERIPVLNV $HDLCODERIPINST
+# connect_bd_net -net [get_bd_nets -of_objects [get_bd_pins clk_wiz_0/clk_out1]] [get_bd_pins $HDLCODERIPINST/AXI4_Lite_ACLK] [get_bd_pins clk_wiz_0/clk_out1]
+# connect_bd_net -net [get_bd_nets -of_objects [get_bd_pins proc_sys_reset_0/peripheral_aresetn]] [get_bd_pins $HDLCODERIPINST/AXI4_Lite_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+# connect_bd_intf_net [get_bd_intf_pins $HDLCODERIPINST/AXI4_Lite] [get_bd_intf_pins axi_interconnect_0/M00_AXI]
+# create_bd_addr_seg -range 0x10000 -offset 0x400D0000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs $HDLCODERIPINST/AXI4_Lite/reg0] SEG_${HDLCODERIPINST}_reg0
+# connect_bd_net -net [get_bd_nets -of_objects [get_bd_pins clk_wiz_0/clk_out1]] [get_bd_pins $HDLCODERIPINST/IPCORE_CLK] [get_bd_pins clk_wiz_0/clk_out1]
+# connect_bd_net -net [get_bd_nets -of_objects [get_bd_pins proc_sys_reset_0/peripheral_aresetn]] [get_bd_pins $HDLCODERIPINST/IPCORE_RESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+# create_bd_port -dir O -from 7 -to 0 PmodJA1
+# connect_bd_net [get_bd_ports PmodJA1] [get_bd_pins $HDLCODERIPINST/PmodJA1]
+# make_wrapper -files $BDFILEPATH -top
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(50). Command ignored
+VHDL Output written to : C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system_top/hdl/system_top.vhd
+VHDL Output written to : C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system_top/hdl/system_top_wrapper.vhd
+Wrote  : <C:/Users/hyang344/Documents/MATLAB/hdl_prj/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system_top/system_top.bd> 
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 514.633 ; gain = 89.363
+# regsub -all "system_top.vhd" [get_files system_top.vhd] "system_top_wrapper.vhd" TOPFILEPATH
+# add_files -norecurse $TOPFILEPATH
+# update_compile_order -fileset sources_1
+# validate_bd_design
+INFO: [BD 5-320] Validate design is not run, since the design is already validated.
+# save_bd_design
+# add_files -fileset constrs_1 -norecurse motor_con_ip_src_motor_controller_top.xdc
+# close_project
+# exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 09 16:30:34 2018...

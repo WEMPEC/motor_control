@@ -1,0 +1,8 @@
+linuxinitialize.c.o: \
+ D:/MATLAB/toolbox/target/codertarget/rtos/src/linuxinitialize.c \
+ D:/MATLAB/toolbox/target/codertarget/rtos/inc/linuxinitialize.h \
+ C:/Users/hyang344/Documents/MATLAB/gm_hdlcoder_led_blinking_interface_ert_rtw/MW_custom_RTOS_header.h
+
+D:/MATLAB/toolbox/target/codertarget/rtos/inc/linuxinitialize.h:
+
+C:/Users/hyang344/Documents/MATLAB/gm_hdlcoder_led_blinking_interface_ert_rtw/MW_custom_RTOS_header.h:

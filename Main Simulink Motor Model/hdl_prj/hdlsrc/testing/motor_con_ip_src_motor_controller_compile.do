@@ -1,0 +1,4 @@
+vlib work
+vcom  motor_con_ip_src_motor_controller_pkg.vhd
+vcom  motor_con_ip_src_Interval_Test_Dynamic.vhd
+vcom  motor_con_ip_src_motor_controller.vhd

@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_motor_control/ip/design_motor_control_axi_gpio_0_0/sim/design_motor_control_axi_gpio_0_0.vhd" \
+"../../../bd/design_motor_control/ip/design_motor_control_axi_gpio_1_0/sim/design_motor_control_axi_gpio_1_0.vhd" \
+"../../../bd/design_motor_control/ip/design_motor_control_rst_ps7_0_100M_0/sim/design_motor_control_rst_ps7_0_100M_0.vhd" \
+
+nosort

@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Mar 30 17:46:45 2018
+# Process ID: 1116
+# Current directory: D:/ALL_PROJECTS/Gpio_LED
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2776 D:\ALL_PROJECTS\Gpio_LED\Gpio_LED.xpr
+# Log file: D:/ALL_PROJECTS/Gpio_LED/vivado.log
+# Journal file: D:/ALL_PROJECTS/Gpio_LED\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ALL_PROJECTS/Gpio_LED/Gpio_LED.xpr
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Project 1-192] Failed to load run synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_processing_system7_0_0_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_axi_gpio_0_0_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_rst_ps7_0_100M_0_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_auto_pc_0_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_processing_system7_0_0_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_axi_gpio_0_0_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_rst_ps7_0_100M_0_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run design_gpio_led_auto_pc_0_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2017) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name CompiledLibDirXcelium
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name ProjectType
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '$PIPUSERFILESDIR'.
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name DSANumComputeUnits
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimRadix
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimTimeUnit
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimArrayDisplayLimit
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimTraceLimit
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimTypes
+WARNING: [Project 1-231] Project 'Gpio_LED.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:valuePermission' : Unexpected attribute
+CRITICAL WARNING: [IP_Flow 19-3933] Unable to construct an IP Instance design_gpio_led_processing_system7_0_0 using VLNV :::.
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:valuePermission' : Unexpected attribute
+CRITICAL WARNING: [IP_Flow 19-3933] Unable to construct an IP Instance design_gpio_led_axi_gpio_0_0 using VLNV :::.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2016_2/Vivado/2016.2/data/ip'.
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:valuePermission' : Unexpected attribute
+CRITICAL WARNING: [IP_Flow 19-3933] Unable to construct an IP Instance design_gpio_led_rst_ps7_0_100M_0 using VLNV :::.
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:valuePermission' : Unexpected attribute
+CRITICAL WARNING: [IP_Flow 19-3933] Unable to construct an IP Instance design_gpio_led_auto_pc_0 using VLNV :::.
+WARNING: [BD 41-1663] The design 'design_gpio_led.bd' is locked for any modification. Locked reason(s):
+* Project read-only. Please run 'save_project_as' before making any change to the bd-design. 
+
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 775.922 ; gain = 119.418
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 30 17:47:41 2018...

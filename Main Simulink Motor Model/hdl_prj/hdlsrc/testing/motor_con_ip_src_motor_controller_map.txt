@@ -1,0 +1,3 @@
+ --> motor_con_ip_src_motor_controller_pkg
+testing/motor_controller/Interval Test Dynamic --> motor_con_ip_src_Interval_Test_Dynamic
+testing/motor_controller --> motor_con_ip_src_motor_controller

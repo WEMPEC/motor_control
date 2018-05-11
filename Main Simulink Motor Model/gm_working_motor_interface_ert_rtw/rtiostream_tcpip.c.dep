@@ -1,0 +1,5 @@
+rtiostream_tcpip.c.o: \
+ C:/ProgramData/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arm_cortex_a/src/rtiostream_tcpip.c \
+ D:/MATLAB/rtw/c/src/rtiostream.h
+
+D:/MATLAB/rtw/c/src/rtiostream.h:

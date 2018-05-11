@@ -1,0 +1,8 @@
+Task "Build FPGA Bitstream" successful.
+Generated logfile: 
+
+Running embedded system build outside MATLAB.
+Please check external shell for system build progress.
+
+The generated bitstream file is located at: hdl_prj\vivado_ip_prj\vivado_prj.runs\impl_1\system_top_wrapper.bit
+
