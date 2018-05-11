@@ -1,4 +1,4 @@
-# ECE_699_project
+# ECE_699_project - Motor Control Platform
 A project that lets you control the motor on the Zedboard with your computer and receive feedback
 
 
@@ -15,14 +15,13 @@ Current Projects:
 3. Motor Control project
 
     The motor connected by the PMOD to the board will start turning clockwise or counter clockwise if the user press the top or button push buttons on the right lower corner of the Zedboard. Created by adding two GPIO devices into the schematics, using push buttons as input and the motor as output. Also coded the beahvior in Vivado SDK. 
-    
+
+4. Main Project - Motor Control Part 2 project
+
+    This project uses Simulink to draw schematics, where we draw out the hardware (compiled and loaded to the FPGA) through the HDL coder and create slider gains and switches for the software interface model. It is also assisted by two downloaded packages - HDL coder and the Embedder package. See the .slx files in the folder for more information.
     
 Future Projects:
 
-4. Motor Control Part 2 project
-
-    Read the driven motors output as input and analyze its speed and rpm. Use difference PWMs to drive the enable pin to generate different drive voltage and see how the rpm changes accordingly.
-
 5. Ultimate goal
 
-    Use Simulink to add the MathWorks FOC IP into the HDL logic to test with different models and achieve real time data collection and showcase. Also possibly create a ADC, Controller interface, and position speed processing.
+    Read back data faster then currently and possibly change the PWM back to duty cycle or speed. Use Simulink to add the MathWorks FOC IP into the HDL logic to test with different models and achieve real time data collection and showcase. Also possibly create a ADC, Controller interface, and position speed processing.
